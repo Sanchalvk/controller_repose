@@ -1,4 +1,5 @@
-name: Build Multi-Repo Docker Images
+# .github/workflows/build.yml
+name: Build Docker Images from Multi Repo
 
 on:
   push:
@@ -13,10 +14,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Clone Angular Frontend Repo
-        run: git clone https://github.com/Sanchalvk/angular_for_one_Dimage.git frontend
+        run: |
+          git clone https://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@github.com/Sanchalvk/angular_for_one_Dimage.git frontend
 
       - name: Clone Java Backend Repo
-        run: git clone https://github.com/Sanchalvk/demoJavaProject.git backend
+        run: |
+          git clone https://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@github.com/Sanchalvk/demoJavaProject.git backend
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -24,8 +27,8 @@ jobs:
       - name: Log in to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: sanchalkhedkar
+          password: dckr_pat_pn0g2w2B6tDE3BXWTsnmGhmEhbc
 
       - name: Build & Push Angular Image
         uses: docker/build-push-action@v5
