@@ -15,11 +15,11 @@ jobs:
 
       - name: Clone Angular Frontend Repo
         run: |
-          git clone https://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@github.com/Sanchalvk/angular_for_one_Dimage.git frontend
+          git clone https://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@github.com/Sanchalvk/Angulardockerfilecreate.git frontend
 
       - name: Clone Java Backend Repo
         run: |
-          git clone https://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@github.com/Sanchalvk/demoJavaProject.git backend
+          git clone https://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@github.com/Sanchalvk/docker-.git backend
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
