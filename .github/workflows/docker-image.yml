@@ -28,7 +28,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: sanchalkhedkar
-          password: dckr_pat_pn0g2w2B6tDE3BXWTsnmGhmEhbc
+          password: dckr_pat_yC7BqB9FPf8d_ZT9M_A4dktjrWo
 
       - name: Build & Push Angular Image
         uses: docker/build-push-action@v5
